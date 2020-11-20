@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/scrumskak.css"/>
+
+    <title>ScrumSkak Web Application</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h3>Opret Turnering</h3>
+    <hr class="divisor">
+
+    <div class="row">
+        <form class="col-md-8 offset-md-2" method="post" action="/create_tournament">
+
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm pt-0">Turnering type</legend>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="local" value="local" checked>
+                            <label class="form-check-label" for="local">
+                                Egne
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="other" value="other">
+                            <label class="form-check-label" for="other">
+                                Andre
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="type" id="weekend" value="weekend">
+                            <label class="form-check-label" for="weekend">
+                                Weekend
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="name">Turnering Navn</label>
+                    <input type="text" name="name" class="form-control" id="name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="date">Dato</label>
+                    <input type="date" data-date-format="YYYY-MM-DD HH:MM:SS" name="date" class="form-control" placeholder="2020-11-20 12:00:00" id="date">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Opret</button>
+        </form>
+
+    </div>
+</div>
+
+<!-- jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+</html>
